@@ -1,0 +1,25 @@
+<div class="table-container">
+  <h3>Listado de Libros Disponibles</h3>
+  <table *ngIf="libro.length > 0; else noData">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libro">
+        <td>{{ libro.id }}</td>
+        <td>{{ libro.titulo }}</td>
+        <td>{{ libro.autor }}</td>
+        <td>${{ libro.precio }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <ng-template #noData>
+    <p class="no-data">No hay libros registrados actualmente.</p>
+  </ng-template>
+</div>

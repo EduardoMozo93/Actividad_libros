@@ -1,0 +1,31 @@
+<form [formGroup]="LibroForm" (ngSubmit)="onSubmit()" class="form-container">
+  <h3>Registrar Nuevo Libro</h3>
+  
+  <div class="form-group">
+    <label>Título:</label>
+    <input type="text" formControlName="titulo"  />
+    <span *ngIf="LibroForm.get('titulo')?.touched && LibroForm.get('titulo')?.errors?.['required']" class="error">
+      El título es obligatorio.
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label>Autor:</label>
+    <input type="text" formControlName="autor" />
+    <span *ngIf="LibroForm.get('autor')?.touched && LibroForm.get('autor')?.errors?.['required']" class="error">
+      El autor es obligatorio.
+    </span>
+  </div>
+
+  <div class="form-group">
+    <label>Precio:</label>
+    <input type="number" formControlName="precio" />
+    <span *ngIf="LibroForm.get('precio')?.touched && LibroForm.get('precio')?.errors?.['required']" class="error">
+      El precio es obligatorio.
+    </span>
+  </div>
+
+  <button type="submit" [disabled]="LibroForm.invalid">Guardar Libro</button>
+</form>
+
+

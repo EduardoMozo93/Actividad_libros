@@ -1,0 +1,7 @@
+<div class="page-layout">
+  <h2>AGREGAR NUEVO LIBRO</h2>
+  <button routerLink="/libros/lista" class="btn-nav">Ver Lista de Libros</button>
+  <hr>
+  <app-libro-form (libroAdded)="onSaveBook($event)"></app-libro-form>
+</div>
+

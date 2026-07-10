@@ -1,0 +1,24 @@
+.table-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center; 
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
